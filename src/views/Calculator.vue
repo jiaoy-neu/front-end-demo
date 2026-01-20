@@ -25,7 +25,7 @@ export default {
     async calculate() {
       this.error = ''
       try {
-        const response = await axios.get(`http://localhost:8080/api/demo?a=${parseFloat(this.num1)}&b=${parseFloat(this.num2)}`
+        const response = await axios.get(`${window.location.origin}/api/demo?a=${parseFloat(this.num1)}&b=${parseFloat(this.num2)}`
         )
         console.log(response, "response")
         this.result = response.data
@@ -66,3 +66,4 @@ button {
   color: red;
 }
 </style>
+
